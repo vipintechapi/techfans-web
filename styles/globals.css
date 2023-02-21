@@ -8,12 +8,163 @@
   font-family: 'Helvetica Neue', sans-serif;
   /* font-family: 'Neue Haas Grotesk Text', sans-serif; */
   /* letter-spacing: .3px; */
-  font-size: 13px;
+  font-size: 16px;
   line-height: 16.9px;
   font-weight: 500px;
+  text-decoration: none;
+  color: rgb(54, 49, 50);
+  list-style: none;
 }
 
 body {
   background-color: white;
-  color: rgb(54, 49, 50);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#__next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 100px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: calc(100% - 50px);
+}
+
+/* nav */
+.nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+
+.nav .left a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav .right ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav .right li a {
+  font-size: 16px;
+  font-weight: 550;
+  background-color: rgb(225, 226, 225);
+  padding: 5px 10px;
+  border-radius: 50px;
+  transition: .3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav .right li:hover a,
+.nav .right li.active a {
+  background-color: rgb(60, 62, 60);
+  color: white;
+}
+
+.nav .right li:hover a svg,
+.nav .right li.active a svg {
+  fill: white;
+}
+
+
+.nav .icon {
+  display: none;
+}
+
+/* footer bar */
+.footer {
+  width: 100%;
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+
+.footer .left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer .right {
+  gap: 10px;
+}
+
+.footer .right .icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media only screen and (max-width : 500px) {
+  #__next {
+    padding: 0px 10px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav .right ul {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .nav .right ul.hide {
+    display: none;
+  }
+
+  .nav li {
+    width: 100%;
+  }
+
+  .nav .right li a {
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+  }
+
+  .nav .icon {
+    display: flex;
+  }
+
+  .nav .icon svg {
+    font-size: 20px;
+  }
 }

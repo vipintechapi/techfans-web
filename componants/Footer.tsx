@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Icons } from "../utils/icons"
 
-const { CopyRight, Facebook, Github, Twitter, Instagram } = Icons
+const { CopyRight, Facebook, Github, Twitter, Instagram, Teligram, Whatsapp } = Icons
 
 const Footer = () => {
 
@@ -16,8 +16,8 @@ const Footer = () => {
                 <span> 2023 - 2024 (All Rights Reserved)</span>
             </div>
             <div className="right">
-                <div className="socialMedia">
-                    Connect to
+                Connect to
+                <div className="icons">
                     <a href="#">
                         <Twitter />
                     </a>
@@ -29,6 +29,12 @@ const Footer = () => {
                     </a>
                     <a href="#">
                         <Instagram />
+                    </a>
+                    <a href="#">
+                        <Teligram />
+                    </a>
+                    <a href="#">
+                        <Whatsapp />
                     </a>
                 </div>
             </div>
